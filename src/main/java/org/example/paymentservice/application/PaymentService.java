@@ -4,7 +4,7 @@ import org.example.paymentservice.application.dto.PaymentRequest;
 import org.example.paymentservice.domain.Payment;
 import org.example.paymentservice.domain.PaymentApproved;
 import org.example.paymentservice.domain.PaymentRejected;
-import org.example.paymentservice.domain.PaymentRepository;
+//import org.example.paymentservice.domain.PaymentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,17 +15,17 @@ import java.util.UUID;
 public class PaymentService implements PaymentProcessor{
 
 
-    private final PaymentRepository repository;
-    private final PaymentGateway paymentGateway;
+//    private final PaymentRepository repository;
+//    private final PaymentGateway paymentGateway;
     private final PaymentEventPublisher publisher;
 
 
     @Override
     public void execute(PaymentRequest request) {
 
-        if (repository.existsByOrderId(request.orderId())) {
-            return;
-        }
+//        if (repository.existsByOrderId(request.orderId())) {
+//            return;
+//        }
 
         Payment payment = new Payment(
                 UUID.randomUUID(),
@@ -33,18 +33,18 @@ public class PaymentService implements PaymentProcessor{
                 request.amount()
         );
 
-        boolean approved = paymentGateway.process(payment);
+//        boolean approved = paymentGateway.process(payment);
 
-        if (approved) {
+//        if (approved) {
             PaymentApproved event = payment.approve();
-            repository.save(payment);
+//            repository.save(payment);
             publisher.publish(event);
-        }
-        else {
-            PaymentRejected event = payment.reject("Saldo insuficiente");
-            repository.save(payment);
-            publisher.publish(event);
-        }
+//        }
+//        else {
+//            PaymentRejected event = payment.reject("Saldo insuficiente");
+////            repository.save(payment);
+//            publisher.publish(event);
+//        }
 
     }
 }
