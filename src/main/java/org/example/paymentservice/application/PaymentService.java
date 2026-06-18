@@ -1,10 +1,10 @@
-package application;
+package org.example.paymentservice.application;
 
-import application.dto.PaymentRequest;
-import domain.Payment;
-import domain.PaymentApproved;
-import domain.PaymentRejected;
-import domain.PaymentRepository;
+import org.example.paymentservice.application.dto.PaymentRequest;
+import org.example.paymentservice.domain.Payment;
+import org.example.paymentservice.domain.PaymentApproved;
+import org.example.paymentservice.domain.PaymentRejected;
+import org.example.paymentservice.domain.PaymentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -33,17 +33,17 @@ public class PaymentService implements PaymentProcessor{
                 request.amount()
         );
 
-        boolean aproved = paymentGateway.process(payment);
+        boolean approved = paymentGateway.process(payment);
 
-        if (aproved) {
+        if (approved) {
             PaymentApproved event = payment.approve();
             repository.save(payment);
             publisher.publish(event);
         }
         else {
-            PaymentRejected evemt = payment.reject("Saldo insuficiente");
+            PaymentRejected event = payment.reject("Saldo insuficiente");
             repository.save(payment);
-            publisher.publish(evemt);
+            publisher.publish(event);
         }
 
     }

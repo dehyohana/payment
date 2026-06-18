@@ -1,4 +1,4 @@
-package application.dto;
+package org.example.paymentservice.application.dto;
 
 import java.math.BigDecimal;
 import java.util.UUID;

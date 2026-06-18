@@ -1,4 +1,4 @@
-package domain;
+package org.example.paymentservice.domain;
 
 import java.util.Optional;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package domain;
+package org.example.paymentservice.domain;
 
 public class BusinessException extends RuntimeException {
     public BusinessException(String message) {
