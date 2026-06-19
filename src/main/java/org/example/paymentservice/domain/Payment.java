@@ -1,18 +1,18 @@
 package org.example.paymentservice.domain;
 
+import lombok.Getter;
+
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@Getter
 public class Payment {
     private UUID id;
     private UUID orderId;
     private BigDecimal amount;
     private PaymentStatus status;
 
-    public Payment(
-            UUID id,
-            UUID orderId,
-            BigDecimal amount) {
+    public Payment(UUID id, UUID orderId, BigDecimal amount) {
         validateAmount(amount);
 
         this.id = id;
@@ -45,21 +45,5 @@ public class Payment {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
             throw new BusinessException("Valor inválido.");
         }
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public UUID getOrderId() {
-        return orderId;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public PaymentStatus getStatus() {
-        return status;
     }
 }

@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ec1c0056-33e0-4137-9bbf-2f9be9c1269c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaymentServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/paymentservice/application/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/paymentservice/application/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/paymentservice/domain/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/paymentservice/domain/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/paymentservice/domain/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/paymentservice/domain/PaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
